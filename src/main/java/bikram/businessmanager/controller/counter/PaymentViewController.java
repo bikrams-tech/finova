@@ -4,6 +4,7 @@ import bikram.businessmanager.entity.PaymentMethod;
 import bikram.businessmanager.entity.inventory.Sale;
 import bikram.businessmanager.service.SalesService;
 import bikram.businessmanager.service.ServiceProvider;
+import bikram.businessmanager.utils.AppAlert;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -45,28 +46,21 @@ public class PaymentViewController {
     public boolean validation() {
 
         if (sale == null) {
-            showAlert("Sale is empty");
+            AppAlert.error(receiveField.getScene().getWindow(),"Sale is empty");
             return false;
         }
 
         if (paymentMethod == null) {
-            showAlert("Please select payment method");
+            AppAlert.error(receiveField.getScene().getWindow(),"Please select payment method");
             return false;
         }
 
         if (receiveField.getText() == null || receiveField.getText().isBlank()) {
-            showAlert("Please enter amount");
+            AppAlert.error(receiveField.getScene().getWindow(),"Please enter amount");
             return false;
         }
 
         return true;
-    }
-
-    private void showAlert(String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
     }
 
     @FXML
@@ -123,7 +117,7 @@ public class PaymentViewController {
         try {
             boolean issale = salesService.multipalSale(sale);
             if (issale){
-                showAlert("Payment successful");
+                AppAlert.sucess(receiveField.getScene().getWindow(),"Payment successful");
             }
         } catch (Exception e){
             e.printStackTrace();

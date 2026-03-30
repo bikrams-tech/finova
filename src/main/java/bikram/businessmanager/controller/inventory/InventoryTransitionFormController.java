@@ -57,7 +57,6 @@ public class InventoryTransitionFormController implements Refreshable {
         saveBtn.disableProperty().bind(validationSupport.invalidProperty());
     }
 
-
     @FXML
     private void onSaveClick(ActionEvent event) {
 
@@ -70,7 +69,7 @@ public class InventoryTransitionFormController implements Refreshable {
             this.paymentMethod=paymentMethodCombo != null ? paymentMethodCombo.getValue() :null;
             this.currentCompanyId = SessionContext.getCurrentCompanyId();
             handle_save();
-
+            AppAlert.sucess(titleLabel.getScene().getWindow(),"sucessfully purchase "+product.getName()+" ->"+ quantity);
             titleLabel.getScene().getWindow().hide();
 
         } catch (Exception e) {
@@ -190,26 +189,42 @@ public class InventoryTransitionFormController implements Refreshable {
 
         Label label = new Label("Supplier:");
         ComboBox<Supplier> combo = new ComboBox<>();
-        Label paymentMethod = new Label("Payment Method");
+
+        Label paymentMethodLabel = new Label("Payment Method");
         paymentMethodCombo = new ComboBox<>();
-        validationSupport.registerValidator(paymentMethodCombo,
-                Validator.createEmptyValidator("Select Payment Method"));
-        paymentMethodCombo.setPromptText("Select payment method");
-        paymentMethodCombo.setItems(FXCollections.observableArrayList(PaymentMethod.values()));
-        combo.setPromptText("Select Supplier");
-        combo.setItems(
-                FXCollections.observableArrayList(
-                        supplierService.getAllByCompany(
-                                SessionContext.getCurrentCompanyId()
-                        )
-                )
+
+        validationSupport.registerValidator(
+                paymentMethodCombo,
+                Validator.createEmptyValidator("Select Payment Method")
         );
 
+        paymentMethodCombo.setPromptText("Select payment method");
+        paymentMethodCombo.setItems(FXCollections.observableArrayList(PaymentMethod.values()));
+
+        combo.setPromptText("Select Supplier");
+        combo.setItems(FXCollections.observableArrayList(
+                supplierService.getAllByCompany(SessionContext.getCurrentCompanyId())
+        ));
 
         this.supplierComboBox = combo;
-        this.paymentMethodCombo = paymentMethodCombo;
 
-        hboxField.getChildren().addAll(label, combo,paymentMethod,paymentMethodCombo);
+        supplierComboBox.setCellFactory(data -> new ListCell<>() {
+            @Override
+            protected void updateItem(Supplier item, boolean empty) {
+                super.updateItem(item, empty);
+                setText(empty || item == null ? null : item.getName());
+            }
+        });
+
+        supplierComboBox.setButtonCell(new ListCell<>() {
+            @Override
+            protected void updateItem(Supplier item, boolean empty) {
+                super.updateItem(item, empty);
+                setText(empty || item == null ? null : item.getName());
+            }
+        });
+
+        hboxField.getChildren().addAll(label, combo, paymentMethodLabel, paymentMethodCombo);
     }
 
     public void setup_validation() {

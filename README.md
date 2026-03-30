@@ -125,7 +125,25 @@ Example:
 
 ## Screenshots
 
-(Add application screenshots here)
+![Dashboard](screenshots/dashboard.png)
+![Login](screenshots/login.png)
+![Login](screenshots/balancesheet.png)
+![Login](screenshots/chartofaccount.png)
+![Login](screenshots/company_list.png)
+![Login](screenshots/company_register.png)
+![Login](screenshots/journal_entry.png)
+![Login](screenshots/ledger_account.png)
+![Login](screenshots/ledger_account_by_time.png)
+![Login](screenshots/main_dash_board.png)
+![Login](screenshots/product_management.png)
+![Login](screenshots/product_import.png)
+![Login](screenshots/product_register.png)
+![Login](screenshots/profitandloss.png)
+![Login](screenshots/balancesheet.png)
+![Login](screenshots/sale_dashboard.png)
+![Login](screenshots/stock.png)
+![Login](screenshots/stock_transition.png)
+![Login](screenshots/payment_process.png)
 
 ---
 

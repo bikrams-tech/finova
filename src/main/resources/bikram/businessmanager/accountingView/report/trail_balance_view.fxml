@@ -12,7 +12,7 @@
    <children>
       <HBox alignment="TOP_CENTER" prefHeight="33.0" prefWidth="600.0">
          <children>
-            <Label text="Label">
+            <Label text="Trail Balance">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font></Label>

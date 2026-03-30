@@ -1,4 +1,4 @@
-package bikram.businessmanager.file_manager.pdfmaker;
+/*package bikram.businessmanager.file_manager.pdfmaker;
 
 import bikram.businessmanager.file_manager.ReportGenerator;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
@@ -13,7 +13,6 @@ public abstract class BaseTablePdfGenerator<T> implements ReportGenerator<T> {
 
     protected float PAGE_WIDTH = PDRectangle.A4.getWidth();
     protected float PAGE_HEIGHT = PDRectangle.A4.getHeight();
-
     protected void drawRow(PDPageContentStream content, float y, String col1, String col2) throws IOException {
         // same logic as BalanceSheetPdfGenerator, text vertically centered
     }
@@ -23,3 +22,5 @@ public abstract class BaseTablePdfGenerator<T> implements ReportGenerator<T> {
         return y;
     }
 }
+
+ */

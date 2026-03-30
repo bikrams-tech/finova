@@ -119,7 +119,7 @@ src/
 ### Clone Repository
 
 ```bash
-git clone your-repository-link
+gh repo clone bikrams-tech/finova
 ```
 
 ### Open Project

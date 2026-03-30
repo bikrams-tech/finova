@@ -1,0 +1,20 @@
+.tree-view {
+    -fx-background-color: white;
+    -fx-border-color: #cfcfcf;
+    -fx-border-radius: 6;
+    -fx-padding: 8;
+}
+
+.tree-cell {
+    -fx-font-size: 14px;
+    -fx-padding: 6 8 6 8;
+}
+
+.tree-cell:selected {
+    -fx-background-color: #3f8efc;
+    -fx-text-fill: white;
+}
+
+.tree-cell:hover {
+    -fx-background-color: #f3f6fb;
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" spacing="10.0" stylesheets="@../../css/tree-style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bikram.businessmanager.controller.acounting.SubAccountViewController">
+   <children>
+      <Label prefHeight="26.0" prefWidth="163.0" text="Accounts">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table_view" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../css/table-style.css" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="sub_account_name" prefWidth="150.0" text="SubAccount" />
+          <TableColumn fx:id="main_account_name" prefWidth="150.0" text="Account" />
+            <TableColumn fx:id="account_catagiry" prefWidth="150.0" text="Account Catagery" />
+            <TableColumn fx:id="code" prefWidth="100.0" text="Code" />
+        </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</VBox>

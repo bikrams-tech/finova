@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bikram.businessmanager.controller.acounting.TrailBalanceController">
+   <children>
+      <HBox alignment="TOP_CENTER" prefHeight="33.0" prefWidth="600.0">
+         <children>
+            <Label text="Label">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      <TableView fx:id="table_view" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../css/table-style.css" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="date_column" prefWidth="100.0" text="Date" />
+          <TableColumn fx:id="title_column" prefWidth="150.0" text="Particular" />
+            <TableColumn fx:id="invoice_column" prefWidth="100.0" text="I.f" />
+            <TableColumn fx:id="debit_column" prefWidth="100.0" text="Debit" />
+            <TableColumn fx:id="credit_column" prefWidth="100.0" text="Credit" />
+        </columns>
+      </TableView>
+       <HBox alignment="CENTER_RIGHT"
+             spacing="20"
+             prefWidth="600">
+
+           <children>
+
+               <Label text="Debit:">
+                   <font>
+                       <Font name="System Bold" size="13"/>
+                   </font>
+               </Label>
+
+               <Label fx:id="total_debit"
+                      minWidth="120"
+                      alignment="CENTER_RIGHT"
+                      style="-fx-border-color: blue; -fx-border-radius: 10; -fx-padding: 8 12 8 12;" />
+
+               <Label text="Credit:">
+                   <font>
+                       <Font name="System Bold" size="13"/>
+                   </font>
+               </Label>
+
+               <Label fx:id="total_credit"
+                      minWidth="120"
+                      alignment="CENTER_RIGHT"
+                      style="-fx-border-color: blue; -fx-border-radius: 10; -fx-padding: 8 12 8 12;" />
+
+           </children>
+
+           <padding>
+               <Insets top="15" right="15" bottom="15" left="15"/>
+           </padding>
+
+       </HBox>
+   </children>
+</VBox>

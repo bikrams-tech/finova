@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="root"
+            prefHeight="520"
+            prefWidth="700"
+            stylesheets="@../css/details/detail_view.css"
+            styleClass="detail-root"
+            xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="bikram.businessmanager.controller.product.ProductDetailViewController">
+
+    <children>
+
+        <VBox spacing="15"
+              AnchorPane.topAnchor="15"
+              AnchorPane.bottomAnchor="15"
+              AnchorPane.leftAnchor="15"
+              AnchorPane.rightAnchor="15">
+
+            <!-- HEADER -->
+            <HBox alignment="CENTER_LEFT"
+                  minHeight="55"
+                  prefHeight="55"
+                  maxHeight="55"
+                  spacing="10"
+                  styleClass="header-bar">
+
+                <padding>
+                    <Insets top="10" right="15" bottom="5" left="15"/>
+                </padding>
+
+                <Button text="←"
+                        onAction="#on_back"
+                        prefWidth="50"
+                        prefHeight="35"
+                        styleClass="back-button"/>
+
+                <Label text="Product Details"
+                       styleClass="page-title"/>
+            </HBox>
+
+            <!-- SCROLL CONTENT -->
+            <ScrollPane fitToWidth="true"
+                        fitToHeight="true"
+                        VBox.vgrow="ALWAYS"
+                        styleClass="detail-scroll">
+
+                <content>
+                    <VBox spacing="20"
+                          styleClass="detail-card">
+
+                        <GridPane hgap="20" vgap="16">
+
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="35"/>
+                                <ColumnConstraints percentWidth="65"/>
+                            </columnConstraints>
+
+                            <Label text="Product Name:" styleClass="field-label" GridPane.rowIndex="0"/>
+                            <Label fx:id="nameLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                            <Label text="Barcode:" styleClass="field-label" GridPane.rowIndex="1"/>
+                            <Label fx:id="barcodeLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                            <Label text="Category:" styleClass="field-label" GridPane.rowIndex="2"/>
+                            <Label fx:id="categoryLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                            <Label text="Unit:" styleClass="field-label" GridPane.rowIndex="3"/>
+                            <Label fx:id="unitLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                            <Label text="Cost Price:" styleClass="field-label" GridPane.rowIndex="4"/>
+                            <Label fx:id="costPriceLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+                            <Label text="Selling Price:" styleClass="field-label" GridPane.rowIndex="5"/>
+                            <Label fx:id="sellingPriceLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+                            <Label text="VAT Applicable:" styleClass="field-label" GridPane.rowIndex="6"/>
+                            <Label fx:id="vatApplicableLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+                            <Label text="VAT Rate (%):" styleClass="field-label" GridPane.rowIndex="7"/>
+                            <Label fx:id="vatRateLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+                            <Label text="Company:" styleClass="field-label" GridPane.rowIndex="8"/>
+                            <Label fx:id="companyLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+
+                            <Label text="Created At:" styleClass="field-label" GridPane.rowIndex="9"/>
+                            <Label fx:id="createdLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+
+                        </GridPane>
+                    </VBox>
+                </content>
+            </ScrollPane>
+
+            <!-- FOOTER -->
+            <HBox alignment="CENTER_RIGHT"
+                  minHeight="55"
+                  prefHeight="55"
+                  maxHeight="55"
+                  styleClass="footer-bar">
+
+                <padding>
+                    <Insets right="15" bottom="10"/>
+                </padding>
+
+                <Button text="Close"
+                        onAction="#handleClose"
+                        prefWidth="90"
+                        prefHeight="38"
+                        styleClass="close-button"/>
+            </HBox>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

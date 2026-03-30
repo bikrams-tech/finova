@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="main_vbox"
+      prefHeight="500.0"
+      prefWidth="900.0"
+      spacing="12"
+      stylesheets="@../css/table-style.css"
+      xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="bikram.businessmanager.controller.inventory.StockTransitionhistoryViewController">
+
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <children>
+
+        <HBox alignment="CENTER_LEFT" spacing="20">
+
+            <children>
+
+                <Label fx:id="today_date_time"
+                       styleClass="top-label"/>
+
+                <Label text="📦 Stock Movement History"
+                       styleClass="title-label">
+                    <font>
+                        <Font size="20"/>
+                    </font>
+                </Label>
+
+                <Label fx:id="company_label_title"
+                       styleClass="top-label"/>
+
+            </children>
+
+        </HBox>
+
+        <TableView fx:id="table_view"
+                   VBox.vgrow="ALWAYS">
+
+            <columns>
+
+                <TableColumn fx:id="date_colum" text="Date"/>
+                <TableColumn fx:id="product_colum" text="Product"/>
+                <TableColumn fx:id="quaintity_colum" text="Quantity"/>
+                <TableColumn fx:id="transition_type_colum" text="Transaction Type"/>
+                <TableColumn fx:id="refrence_colum" text="Reference"/>
+
+            </columns>
+
+        </TableView>
+
+        <Pagination fx:id="pagination"
+                    prefHeight="40"
+                    maxHeight="40"/>
+
+    </children>
+
+</VBox>

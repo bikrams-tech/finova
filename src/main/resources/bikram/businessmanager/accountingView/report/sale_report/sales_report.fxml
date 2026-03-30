@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bikram.businessmanager.controller.inventory.report.sale_report.SalesReportController">
+   <children>
+      <HBox alignment="TOP_CENTER" prefHeight="30.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Label text="Sales Report" />
+            <Label fx:id="date_label" />
+         </children>
+      </HBox>
+      <ScrollPane fx:id="scroll_pane" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <content>
+            <VBox fx:id="vbox_under_scroll_pane" prefHeight="450.0" prefWidth="900.0">
+               <children>
+                  <TableView fx:id="sales_table_view" editable="true" prefHeight="345.0" prefWidth="722.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="id_colum" prefWidth="100.0" text="Id:" />
+                        <TableColumn fx:id="invoice_colum" prefWidth="75.0" text="Invoice No:" />
+                        <TableColumn fx:id="customer_name_colum" prefWidth="75.0" text="Customer Name:" />
+                        <TableColumn fx:id="payment_method_culom" prefWidth="75.0" text="payment Method:" />
+                        <TableColumn fx:id="total_item_colum" prefWidth="75.0" text="Total Item:" />
+                        <TableColumn fx:id="total_amount_colum" prefWidth="75.0" text="Total amount:" />
+                        <TableColumn fx:id="date_colum" prefWidth="75.0" text="Date:" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>

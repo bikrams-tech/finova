@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fitToWidth="true" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bikram.businessmanager.controller.employee.EmployeeFormController">
+
+    <content>
+        <VBox alignment="TOP_CENTER" spacing="20" style="-fx-background-color: #669999;">
+            <padding>
+                <Insets bottom="30" left="30" right="30" top="30" />
+            </padding>
+
+            <GridPane hgap="20" maxWidth="900" vgap="15">
+
+                <!-- Two Equal Columns -->
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="35" />
+                    <ColumnConstraints percentWidth="65" />
+                </columnConstraints>
+
+                <!-- Uniform Row Height -->
+                <rowConstraints>
+                    <RowConstraints minHeight="40" prefHeight="40" />
+                    <RowConstraints minHeight="40" prefHeight="40" />
+                    <RowConstraints minHeight="40" prefHeight="40" />
+                    <RowConstraints minHeight="40" prefHeight="40" />
+                    <RowConstraints minHeight="40" prefHeight="40" />
+                    <RowConstraints minHeight="40" prefHeight="40" />
+                    <RowConstraints minHeight="40" prefHeight="40" />
+                    <RowConstraints minHeight="40" prefHeight="40" />
+                    <RowConstraints minHeight="40" prefHeight="40" />
+                    <RowConstraints minHeight="40" prefHeight="40" />
+                </rowConstraints>
+
+                <children>
+
+                    <!-- Company Name -->
+                    <Label text="Employee Name:" GridPane.rowIndex="0" />
+                    <TextField fx:id="firstNameField" promptText="first name" style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <!-- PAN -->
+                    <Label text="Last Name" GridPane.rowIndex="1" />
+                    <TextField fx:id="lastNameField" promptText="last name" style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <!-- VAT -->
+                    <Label text="Citizenship No" GridPane.rowIndex="2" />
+                    <TextField fx:id="citizenshipNoField" promptText="citizenship no" style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <!-- Registration -->
+                    <Label text="Phone Number" GridPane.rowIndex="3" />
+                    <TextField fx:id="phoneNumberField" promptText="phone number" style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                    <!-- Address -->
+                    <Label text="Address:" GridPane.rowIndex="4" />
+                    <TextField fx:id="addressField" promptText="address" style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <!-- Phone -->
+                    <Label text="Position" GridPane.rowIndex="5" />
+                    <TextField fx:id="positionField" promptText="position" style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                    <!-- Email -->
+                    <Label text="Salary" GridPane.rowIndex="6" />
+                    <TextField fx:id="salaryField" promptText="salary" style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                    <!-- Fiscal Year -->
+                    <Label text="Hire Date" GridPane.rowIndex="7" />
+                    <DatePicker fx:id="hireDatePicker" promptText="hire date" style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                    <!-- Active -->
+                    <Label text="Status" GridPane.rowIndex="8" />
+                    <TextField fx:id="statusField" promptText="status" style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+                </children>
+
+            </GridPane>
+
+            <!-- Buttons -->
+            <HBox alignment="CENTER" spacing="15">
+                <Button fx:id="saveBtn" onAction="#saveEmployee" prefWidth="120" style="-fx-background-color: #b9b3cc;" text="Save" />
+                <Button fx:id="clearBtn" onAction="#clearForm" prefWidth="120" style="-fx-background-color: #b9b3cc;" text="Clear" />
+                <Button fx:id="cancelbtn" onAction="#canceltask" prefWidth="120" style="-fx-background-color: #b9b3cc;" text="Cancel" />
+            </HBox>
+
+        </VBox>
+    </content>
+</ScrollPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="dashboardBoarderpane" prefHeight="650" prefWidth="1000" style="-fx-background-color: #f4f6f9;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bikram.businessmanager.controller.dashbord.DashboardviewController">
+
+    <!-- ================= TOP BAR ================= -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: #1e1e2f; -fx-padding: 10 20 10 20;">
+
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Business Manager" />
+
+            <Pane HBox.hgrow="ALWAYS" />
+
+            <Label fx:id="companyLabel" style="-fx-text-fill: white; -fx-font-size: 14px;" text="Company: Techura" />
+
+            <Button onAction="#switchCompany" style="-fx-background-color: #6a00f4; -fx-text-fill: white;" text="Switch" />
+
+            <Label fx:id="timeLabel" style="-fx-text-fill: #cccccc;" text="00:00:00" />
+
+            <Button fx:id="logutBtn" onAction="#LogutUser" style="-fx-background-color: #e63946; -fx-text-fill: white;" text="Logout" />
+        </HBox>
+    </top>
+
+    <!-- ================= LEFT SIDEBAR ================= -->
+    <left>
+        <VBox prefWidth="200" spacing="15" style="-fx-background-color: #2b2d42; -fx-padding: 20;">
+
+            <Button fx:id="dashboardBtn" maxWidth="Infinity" onAction="#openDashboardPannel" text="Dashboard" />
+            <Button fx:id="productBtn" maxWidth="Infinity" onAction="#openProductpannel" text="Products" />
+            <Button fx:id="employeeBtn" maxWidth="Infinity" onAction="#openEmployeePanel" text="Employees" />
+            <Button fx:id="salesBtn" maxWidth="Infinity" onAction="#openSalesPannel" text="Sales" />
+            <Button fx:id="accountingBtn" maxWidth="Infinity" onAction="#openAccountingPannel" text="Accounting" />
+         <Button fx:id="analysisBtn" maxWidth="Infinity" onAction="#openAnalysisPanel" text="Analysis" />
+
+        </VBox>
+    </left>
+   <center>
+      <StackPane fx:id="contentArea" prefHeight="150.0" prefWidth="200.0" style="-fx-padding: 25;" BorderPane.alignment="CENTER" />
+   </center>
+
+</BorderPane>

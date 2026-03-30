@@ -1,0 +1,65 @@
+.payment-root {
+    -fx-background-color: #1f1f1f;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-border-color: #333;
+}
+
+.payment-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.payment-card {
+    -fx-background-color: #2a2a2a;
+    -fx-padding: 15;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #444;
+    -fx-cursor: hand;
+}
+
+.payment-card:hover {
+    -fx-border-color: #00ff99;
+}
+
+.payment-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.detail-box {
+    -fx-background-color: #2b2b2b;
+    -fx-padding: 20;
+    -fx-background-radius: 12;
+}
+
+.detail-label {
+    -fx-text-fill: #cccccc;
+    -fx-font-size: 14px;
+}
+
+.value-label {
+    -fx-text-fill: #00ff99;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+}
+
+.secondary-btn {
+    -fx-background-color: #444;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+}
+
+.payment-btn {
+    -fx-background-color: #00aa66;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+}

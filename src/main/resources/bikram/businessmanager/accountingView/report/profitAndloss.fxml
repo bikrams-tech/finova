@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="15" stylesheets="@../../css/table-style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bikram.businessmanager.controller.acounting.ProfitLossController">
+
+    <HBox prefWidth="451" />
+
+    <Label style="-fx-font-size:20px; -fx-font-weight:bold;" text="Profit Loss Statement" />
+
+    <TableView fx:id="table">
+
+        <columns>
+
+            <TableColumn fx:id="accountCol" prefWidth="200" text="Account" />
+
+            <TableColumn fx:id="typeCol" prefWidth="120" text="Type" />
+
+            <TableColumn fx:id="amountCol" prefWidth="120" text="Amount" />
+
+        </columns>
+
+    </TableView>
+
+    <Separator />
+
+    <GridPane hgap="20" vgap="10">
+
+        <Label text="Total Income:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <GridPane.margin>
+                <Insets left="10" />
+            </GridPane.margin>
+        </Label>
+
+        <Label fx:id="incomeLabel" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Total Expense:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets left="10" />
+            </GridPane.margin>
+        </Label>
+
+        <Label fx:id="expenseLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Net Profit:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets left="10" />
+            </GridPane.margin>
+        </Label>
+
+        <Label fx:id="profitLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+
+    </GridPane>
+
+</VBox>

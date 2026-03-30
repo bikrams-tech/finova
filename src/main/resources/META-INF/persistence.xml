@@ -1,0 +1,30 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.0">
+
+    <persistence-unit name="companyPU">
+
+        <class>bikram.manager.entities.Company</class>
+
+        <properties>
+
+            <property name="hibernate.transaction.jta.platform"
+                      value="org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform"/>
+
+            <!-- Hibernate -->
+            <property name="hibernate.dialect"
+                      value="org.hibernate.community.dialect.SQLiteDialect"/>
+
+            <property name="hibernate.hbm2ddl.auto"
+                      value="update"/>
+
+            <property name="hibernate.show_sql"
+                      value="true"/>
+
+            <property name="hibernate.format_sql"
+                      value="true"/>
+
+        </properties>
+
+    </persistence-unit>
+
+</persistence>

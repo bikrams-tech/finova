@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bikram.businessmanager.controller.acounting.VoucherEntryViewController">
+   <top>
+      <VBox spacing="10.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <children>
+            <GridPane hgap="15.0" vgap="10.0" VBox.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Voucher No:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                  <TextField fx:id="voucherNoField" editable="false" promptText="Voucher number:" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  <Label text="Date:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                  <DatePicker fx:id="datePickerField" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                  <Label text="Company:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="companySelectCombo" promptText="Select company" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                  <Label text="Costumer:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="customerSelectCombo" promptText="Select Customer" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.vgrow="NEVER" />
+                  <Label text="Voucher Type:" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="voucherSelectCombo" prefWidth="128.0" promptText="Select Voucher Type" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <TableView fx:id="voucherTable" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="accountColumField" minWidth="0.0" prefWidth="250.0" text="Account" />
+                <TableColumn fx:id="debitColumField" prefWidth="150.0" text="Debit" />
+                  <TableColumn fx:id="creditColumnField" prefWidth="150.0" text="Credit" />
+                  <TableColumn fx:id="actionColumnField" prefWidth="100.0" text="Action" />
+                  <TableColumn fx:id="noteColumField" prefWidth="75.0" resizable="false" text="Journal Note" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="35.0" prefWidth="600.0">
+               <children>
+                  <ComboBox fx:id="accountSelectCombo" promptText="Select Account" />
+                  <TextField fx:id="debitInputField" promptText="Debit">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></TextField>
+                  <TextField fx:id="creditInputField" promptText="Credit">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></TextField>
+                  <Button fx:id="addlineButton" mnemonicParsing="false" onAction="#addLine" prefHeight="34.0" prefWidth="100.0" text="Add Line" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="Note:">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="noteTextField" prefHeight="26.0" prefWidth="594.0" promptText="note writre heare..." style="-fx-background-radius: 5;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="7.0" />
+                     </HBox.margin></TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="10">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="104.0" text="Total Debit">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></Label>
+                  <Label fx:id="totalDebitLabelField" prefHeight="28.0" prefWidth="135.0" style="-fx-border-color: pink; -fx-border-radius: 4;">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></Label>
+                  <Pane prefHeight="30.0" prefWidth="461.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <children>
+                        <Label alignment="CENTER_RIGHT" layoutX="161.0" prefHeight="28.0" prefWidth="101.0" text="Total Credit" />
+                        <Label fx:id="totalCreditLabelField" layoutX="274.0" prefHeight="30.0" prefWidth="174.0" style="-fx-border-radius: 5; -fx-border-color: pink; -fx-alignment: right;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children></HBox>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+               <children>
+                  <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" text="Clear">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                     </HBox.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#saveVoucher" text="Save Voucher">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                     </HBox.margin></Button>
+               </children></HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

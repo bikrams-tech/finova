@@ -1,0 +1,49 @@
+.balance-header {
+    -fx-padding: 20;
+}
+
+.balance-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2d3436;
+}
+
+.balance-container {
+    -fx-padding: 20;
+}
+
+.balance-card {
+    -fx-background-color: white;
+    -fx-background-radius: 14;
+
+    -fx-padding: 18;
+
+    -fx-border-color: rgba(0,0,0,0.08);
+    -fx-border-radius: 14;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 16, 0.2, 0, 4);
+}
+
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+
+.total-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2d3436;
+}
+.top_button{
+-fx-border-radius: 10px;
+-fx-background-radius: 10px;
+-fx-padding: 10px;
+-fx-margin: 5px;
+-fx-font-weight: bold;
+}
+
+.btn-bar{
+-fx-padding: 10px;
+-fx-gap:10px;
+}

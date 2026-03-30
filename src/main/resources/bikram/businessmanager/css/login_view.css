@@ -1,0 +1,62 @@
+.root-pane {
+    -fx-background-color:
+        linear-gradient(to bottom right, #eef2ff, #dbeafe);
+}
+
+.login-card {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.88));
+
+    -fx-background-radius: 18px;
+    -fx-border-radius: 18px;
+
+    -fx-padding: 35px;
+    -fx-margin :30px;
+
+    -fx-border-color: rgba(255,255,255,0.35);
+    -fx-border-width: 1px;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 22, 0.25, 0, 6);
+}
+
+.title-label {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e293b;
+}
+
+.field-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #475569;
+    -fx-font-weight: bold;
+}
+
+.modern-field {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+
+    -fx-border-color: #dbeafe;
+    -fx-border-width: 1.5px;
+
+    -fx-padding: 10px 14px;
+
+    -fx-font-size: 14px;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 6, 0.1, 0, 2);
+}
+
+.modern-field:focused {
+    -fx-border-color: #6a82fb;
+    -fx-border-width: 2px;
+
+    -fx-effect: dropshadow(gaussian, rgba(106,130,251,0.18), 10, 0.2, 0, 2);
+}
+.login-btn {
+    -fx-background-color: linear-gradient(to right, #4a69bd, #6a82fb);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12px;
+    -fx-padding: 10px 28px 10px 10px;
+
+}

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bikram.businessmanager.controller.acounting.JournalEntryViewController">
+
+    <!-- Center Table -->
+    <center>
+        <VBox prefHeight="231.0" prefWidth="600.0">
+            <children>
+                <TableView fx:id="journalTable" prefHeight="121.0" prefWidth="585.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="accountColumn" text="Account" />
+                        <TableColumn fx:id="debitColumn" text="Debit" />
+                        <TableColumn fx:id="creditColumn" text="Credit" />
+                        <TableColumn fx:id="descriptionColumn" text="Description" />
+                        <TableColumn fx:id="actionColumn" text="Action" />
+                    </columns>
+                </TableView>
+
+                <HBox prefHeight="85.0" spacing="10.0">
+                    <children>
+                  <Label text="Dr" />
+                  <TextField fx:id="debitInputField" promptText="Debit" />
+                  <Label text="Cr" />
+                  <TextField fx:id="creditInputField" promptText="Credit" />
+                        <Button fx:id="addLineBtn" onAction="#addLine" text="Add line" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+
+    <!-- Bottom totals -->
+    <bottom>
+        <HBox spacing="20.0">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <children>
+                <Label text="Total Debit:" />
+                <Label fx:id="totalDebitLabel" text="0.00" />
+                <Label text="Total Credit:" />
+                <Label fx:id="totalCreditLabel" text="0.00" />
+                <Button onAction="#onSaveJournal" text="Save Journal Entry" />
+            </children>
+        </HBox>
+    </bottom>
+   <padding>
+      <Insets bottom="15.0" left="15.0" top="15.0" />
+   </padding>
+   <top>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+              <GridPane hgap="15.0" vgap="15.0">
+                  <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <children>
+                      <Label text="Date:" GridPane.rowIndex="0" />
+                      <DatePicker fx:id="datePickerField" promptText="Select Date" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </DatePicker>
+      
+                      <Label text="Company:" GridPane.rowIndex="1" />
+                      <ComboBox fx:id="companyCombo" promptText="Select Company" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+      
+                      <Label text="Account:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                      <ComboBox fx:id="accountSelectCombo" promptText="Select Account" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+      
+                      <Label text="Journal Note" GridPane.rowIndex="2" />
+                      <TextField fx:id="noteTextField" promptText="Wite Journal Note Heare" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label text="Voucher No:" GridPane.columnIndex="2" GridPane.vgrow="ALWAYS">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="voucherNoField" GridPane.columnIndex="3">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label text="Voucher Type:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="voucherTypeCombo" prefWidth="150.0" promptText="Select Voucher Type" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+              </GridPane>
+         </children>
+      </VBox>
+   </top>
+
+</BorderPane>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bikram.businessmanager.controller.acounting.AccountingViewController">
+
+    <center>
+        <StackPane fx:id="AccountingContentArea" prefHeight="522.0" prefWidth="613.0" />
+    </center>
+   <left>
+      <VBox fx:id="sidebar" styleClass="sidebar" stylesheets="@../css/sidebar.css" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <Button fx:id="toogleBtn" mnemonicParsing="false" onAction="#toggleSidebar" styleClass="toogleBtn" text="☰" />
+            <Button fx:id="journalBtn" mnemonicParsing="false" onAction="#on_journal_entry" text="📘Journal Entry" />
+            <Button fx:id="paymentVoucherBtn" mnemonicParsing="false" onAction="#on_payment_voucher" text="💰Payment Voucher" />
+            <Button fx:id="reciptVoucherBtn" mnemonicParsing="false" onAction="#on_recipt_voucher" text="💵 Receipt Voucher" />
+            <Button fx:id="ledgerBtn" mnemonicParsing="false" onAction="#on_ledger_acount" text="📂Ledger" />
+            <Button fx:id="trailBtn" mnemonicParsing="false" onAction="#on_trail_balance" text="📊Trail Balance" />
+            <Button fx:id="profitlossBtn" mnemonicParsing="false" onAction="#on_profit_loss" text="📉Profit loss" />
+            <Button fx:id="balenceSheetBtn" mnemonicParsing="false" onAction="#on_balance_sheet" text="🏦Balance Sheet" />
+            <Button fx:id="taxBtn" mnemonicParsing="false" onAction="#on_tax" text="💸Tax" />
+            <Button fx:id="accountSettingBtn" mnemonicParsing="false" onAction="#on_account_setting" text="⚙Account Setting" />
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <buttons>
+          <Button mnemonicParsing="false" text="Save" />
+            <Button mnemonicParsing="false" text="Clear" />
+        </buttons>
+      </ButtonBar>
+   </bottom>
+   <top>
+      <HBox prefHeight="42.0" prefWidth="900.0" styleClass="menu-bar-container" stylesheets="@../css/menubar.css" BorderPane.alignment="CENTER">
+         <children>
+              <MenuBar styleClass="menu-bar-container">
+      
+                                          <menus>
+                  <Menu mnemonicParsing="false" text="Entry">
+                     <items>
+                              <MenuItem onAction="#onJournalViewEntryOpen" text="Journal Entry" />
+                        <MenuItem mnemonicParsing="false" text="Purchase Entry" />
+                        <MenuItem mnemonicParsing="false" text="Sales Entry" />
+                        <MenuItem mnemonicParsing="false" text="Purchase Return Entry" />
+                        <MenuItem mnemonicParsing="false" text="Sales Return Entry" />
+                        <MenuItem mnemonicParsing="false" onAction="#on_contra_entry" text="Contra Entry" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Account">
+                     <items>
+                              <MenuItem onAction="#createNewAccountPage" text="New Account" />
+                              <MenuItem onAction="#createSubAccount" text="New Sub Account" />
+                              <MenuItem onAction="#onAccountTableView" text="View Account" />
+                        <MenuItem mnemonicParsing="false" onAction="#onSubAccountTableView" text="View Sub Account" />
+                     </items>
+                  </Menu>
+      
+                                              <Menu text="Edit">
+                          <items>
+                              <MenuItem text="Delete" />
+                          </items>
+                      </Menu>
+                  <Menu mnemonicParsing="false" text="Report">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Trail Balence" />
+                      <MenuItem mnemonicParsing="false" onAction="#onProfitAndLoss" text="Profit&amp;Loss" />
+                        <MenuItem mnemonicParsing="false" text="Cash Folw" />
+                        <MenuItem mnemonicParsing="false" text="Balence Sheet" />
+                              <MenuItem onAction="#onshowJournalEntryTable" text="Journal Entries" />
+                              <MenuItem text="Voucher Entries" />
+                        <MenuItem mnemonicParsing="false" onAction="#onLedgerView" text="Ledger" />
+                    </items>
+                  </Menu>
+      
+                                          </menus>
+      
+                                      </MenuBar>
+         </children>
+      </HBox>
+   </top>
+
+</BorderPane>

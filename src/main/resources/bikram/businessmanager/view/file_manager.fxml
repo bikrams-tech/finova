@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="bikram.businessmanager.controller.ui.FileManagerController"
+            prefHeight="400.0" prefWidth="600.0">
+    <HBox spacing="10">
+        <Label text="Custom Name:"/>
+        <TextField fx:id="customNameField" promptText="Enter file name"/>
+        <Button text="Save PDF" onAction="#onSavePdf"/>
+        <Button text="Save Excel" onAction="#onSaveExcel"/>
+    </HBox>
+
+    <TabPane prefHeight="500" prefWidth="700">
+        <Tab text="PDF Files">
+            <VBox spacing="5">
+                <ListView fx:id="pdfListView" prefHeight="400"/>
+                <Button text="Preview PDF" onAction="#onPreviewPdf"/>
+            </VBox>
+        </Tab>
+        <Tab text="Excel Files">
+            <VBox spacing="5">
+                <ListView fx:id="excelListView" prefHeight="400"/>
+                <Button text="Preview Excel" onAction="#onPreviewExcel"/>
+            </VBox>
+        </Tab>
+    </TabPane>
+
+</VBox>

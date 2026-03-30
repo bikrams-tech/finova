@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+<ScrollPane fx:id="root" fitToWidth="true"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="bikram.businessmanager.controller.dashbord.MaindashboardviewController">
+
+    <content>
+        <VBox spacing="25" style="-fx-padding: 25;">
+
+            <!-- KPI CARDS -->
+            <HBox spacing="20">
+
+                <VBox prefWidth="180"
+                      style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10;">
+                    <Label text="Total Products"/>
+                    <Label fx:id="totalProductLabel"
+                           style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+                </VBox>
+
+                <VBox prefWidth="180"
+                      style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10;">
+                    <Label text="Total Employees"/>
+                    <Label fx:id="totalEmployeeLabel"
+                           style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+                </VBox>
+
+                <VBox prefWidth="180"
+                      style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10;">
+                    <Label text="Total Sales"/>
+                    <Label fx:id="totalSalesLabel"
+                           style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+                </VBox>
+
+                <VBox prefWidth="180"
+                      style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10;">
+                    <Label text="Total Income"/>
+                    <Label fx:id="TotalIncomeLabel"
+                           style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+                </VBox>
+
+            </HBox>
+
+            <!-- CHARTS SECTION -->
+            <HBox spacing="25">
+
+                <BarChart fx:id="barChartForSales"
+                          prefWidth="500"
+                          title="This Week Sales">
+                    <xAxis>
+                        <CategoryAxis/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis/>
+                    </yAxis>
+                </BarChart>
+
+                <LineChart fx:id="lineChartForSales"
+                           prefWidth="500"
+                           title="Monthly Trend">
+                    <xAxis>
+                        <CategoryAxis/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis/>
+                    </yAxis>
+                </LineChart>
+
+            </HBox>
+
+        </VBox>
+    </content>
+</ScrollPane>

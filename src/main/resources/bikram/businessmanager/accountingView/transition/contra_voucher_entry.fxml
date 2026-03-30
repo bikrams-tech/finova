@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefWidth="700" spacing="20" stylesheets="@../../css/transition/contra_voucher_entry.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bikram.businessmanager.controller.acounting.transition.ContraVoucherentryController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <!-- HEADER -->
+    <HBox alignment="CENTER_LEFT" spacing="20">
+        <children>
+            <Label text="Date:" />
+            <Label fx:id="dateLabel" />
+
+            <Label styleClass="title-label" text="Contra Voucher Entry" />
+        </children>
+    </HBox>
+
+    <!-- FORM -->
+    <GridPane hgap="15" vgap="15">
+
+        <columnConstraints>
+            <ColumnConstraints prefWidth="130" />
+            <ColumnConstraints prefWidth="250" />
+            <ColumnConstraints prefWidth="180" />
+        </columnConstraints>
+
+        <children>
+
+            <!-- FROM ACCOUNT -->
+            <Label text="From Account:" GridPane.rowIndex="0" />
+            <ComboBox fx:id="fromAccountBox" promptText="Select Account" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label fx:id="fromBalanceLabel" text="Balance: 0.00" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+            <!-- TO ACCOUNT -->
+            <Label text="To Account:" GridPane.rowIndex="1" />
+            <ComboBox fx:id="toAccountBox" promptText="Select Account" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label fx:id="toBalanceLabel" text="Balance: 0.00" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+            <!-- AMOUNT -->
+            <Label text="Amount:" GridPane.rowIndex="2" />
+            <TextField fx:id="amountField" promptText="Enter amount" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <!-- REFERENCE -->
+            <Label text="Reference:" GridPane.rowIndex="3" />
+            <TextField fx:id="referenceField" promptText="Optional reference" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        </children>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+
+    <!-- NARRATION -->
+    <VBox spacing="8">
+        <children>
+            <Label text="Narration" />
+            <TextArea fx:id="narrationArea" prefHeight="100" />
+        </children>
+    </VBox>
+
+    <!-- BUTTON -->
+    <HBox spacing="10">
+        <children>
+            <Button fx:id="saveBtn" onAction="#saveContraEntry" styleClass="save-btn" text="Save" />
+            <Button onAction="#cancelTask" styleClass="cancel-btn" text="Cancel" />
+        </children>
+    </HBox>
+
+</VBox>

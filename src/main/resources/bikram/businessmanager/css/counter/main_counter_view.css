@@ -1,0 +1,164 @@
+/* ROOT */
+.root {
+    -fx-background-color: #0f172a;
+    -fx-font-family: "Segoe UI";
+}
+
+/* TOP PANEL */
+.top-panel {
+    -fx-background-color: linear-gradient(to right, #111827, #1e293b);
+    -fx-background-radius: 0 0 18 18;
+    -fx-padding: 15;
+}
+
+/* TITLE */
+.title-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f8fafc;
+}
+
+/* SECTION TITLE */
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+
+}
+
+/* TEXT FIELD */
+.text-field {
+    -fx-background-color: #1e293b;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #94a3b8;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #334155;
+    -fx-padding: 10;
+}
+
+.text-field:focused {
+    -fx-border-color: #38bdf8;
+}
+
+/* BUTTON */
+.button {
+    -fx-background-color: #334155;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: #475569;
+}
+
+/* PAYMENT BUTTON */
+.payment-btn {
+    -fx-background-color: linear-gradient(to right, #10b981, #059669);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+}
+
+/* SECONDARY BUTTON */
+.secondary-btn {
+    -fx-background-color: #1e293b;
+    -fx-text-fill: #e2e8f0;
+}
+
+/* PRODUCT CARD */
+.product-card {
+    -fx-background-color: #1e293b;
+    -fx-padding: 14;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-border-color: #334155;
+}
+
+.product-card:hover {
+    -fx-border-color: #38bdf8;
+    -fx-effect: dropshadow(gaussian, rgba(56,189,248,0.25),12,0,0,3);
+}
+
+/* TABLE */
+.table-view {
+    -fx-background-color: #1e293b;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-border-color: #334155;
+}
+
+/* TABLE HEADER */
+.table-view .column-header-background {
+    -fx-background-color: #0f172a;
+}
+
+.table-view .label {
+    -fx-text-fill: #f8fafc;
+    -fx-font-weight: bold;
+}
+
+/* TABLE ROW */
+.table-row-cell {
+    -fx-background-color: #1e293b;
+    -fx-text-fill: white;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #334155;
+}
+
+/* SUMMARY BOX */
+.summary-box {
+    -fx-background-color: #1e293b;
+    -fx-padding: 15;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #334155;
+}
+
+/* SUMMARY LABELS */
+.summary-box .label {
+    -fx-text-fill: #e2e8f0;
+}
+
+/* GRAND TOTAL */
+.grand-total {
+    -fx-text-fill: #22c55e;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* BOTTOM */
+.bottom-panel {
+    -fx-background-color: #111827;
+}
+
+/* TABLE HEADER BACKGROUND */
+.table-view .column-header-background {
+    -fx-background-color: black;
+}
+
+/* HEADER CELL */
+.table-view .column-header {
+    -fx-background-color: black;
+}
+
+/* HEADER TEXT */
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+/* TABLE BODY ROW */
+.table-row-cell {
+    -fx-background-color: #1e293b;
+}
+
+/* ROW TEXT */
+.table-cell {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+}

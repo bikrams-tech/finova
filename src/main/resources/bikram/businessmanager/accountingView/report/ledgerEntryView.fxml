@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10" stylesheets="@../../css/table-style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bikram.businessmanager.controller.acounting.LedgerAccountViewController">
+
+    <HBox spacing="10" VBox.vgrow="ALWAYS">
+      <Button mnemonicParsing="false" onAction="#on_back" text="←" />
+        <Label text="Account:">
+         <HBox.margin>
+            <Insets left="20.0" />
+         </HBox.margin></Label>
+        <ComboBox fx:id="accountCombo" />
+
+        <Label text="From" />
+        <DatePicker fx:id="fromDate" />
+
+        <Label text="To" />
+        <DatePicker fx:id="toDate" />
+
+        <Button onAction="#loadLedger" text="Load" />
+      <VBox.margin>
+         <Insets top="20.0" />
+      </VBox.margin>
+    </HBox>
+   <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" VBox.vgrow="ALWAYS">
+      <children>
+      
+          <Label style="-fx-font-size:18; -fx-font-weight:bold;" text="GENERAL LEDGER" textAlignment="CENTER">
+            <graphic>
+      </graphic>
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+         </Label>
+         <Label fx:id="accountNameLabel" prefHeight="44.0" prefWidth="174.0" VBox.vgrow="ALWAYS" />
+         <Label fx:id="accountNoLabel" VBox.vgrow="ALWAYS" />
+         <Label text="Periad" />
+      </children>
+   </VBox>
+
+    <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+
+        <columns>
+
+            <TableColumn fx:id="dateColumn" prefWidth="120" text="DATE" />
+            <TableColumn fx:id="voucherColumn" prefWidth="120" text="VOUCHER" />
+            <TableColumn fx:id="descColumn" prefWidth="250" text="PARTICULAR" />
+
+            <TableColumn fx:id="debitColumn" prefWidth="120" text="DEBIT" />
+            <TableColumn fx:id="creditColumn" prefWidth="120" text="CREDIT" />
+
+            <TableColumn fx:id="balanceColumn" prefWidth="140" text="BALANCE" />
+
+        </columns>
+
+    </TableView>
+
+    <HBox alignment="CENTER_RIGHT" spacing="25">
+        <Label text="Total Debit:" />
+        <Label fx:id="totalDebitLabel" style="-fx-font-weight:bold;" />
+        <Label text="Total Credit:" />
+        <Label fx:id="totalCreditLabel" style="-fx-font-weight:bold;" /> </HBox>
+
+</VBox>

@@ -1,0 +1,21 @@
+.back-button {
+-fx-font-size: 16px;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 5 10;
+}
+.back-button {
+-fx-background-color: #f3f4f6;
+    -fx-background-radius: 8;
+}
+
+.title-label {
+}
+.grid_pane {
+}
+
+.top-bar {
+    -fx-background-color: white;
+    -fx-border-color: #e5e7eb;
+    -fx-border-width: 0 0 1 0;
+}

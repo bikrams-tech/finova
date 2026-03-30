@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../css/report/balance_sheet.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bikram.businessmanager.controller.acounting.BalanceSheetViewController">
+
+    <top>
+        <VBox alignment="CENTER" spacing="10" styleClass="balance-header">
+            <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="54.0" prefWidth="1060.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0" styleClass="btn-bar">
+                    <buttons>
+                        <Button mnemonicParsing="false" onAction="#on_preview_print" prefHeight="37.0" prefWidth="105.0" styleClass="top_button" text="Preview" />
+                        <Button mnemonicParsing="false" onAction="#save_as_excell" prefHeight="37.0" styleClass="top_button" text="Save as Xcel" />
+                        <Button mnemonicParsing="false" onAction="#save_as_pdf" prefHeight="37.0" prefWidth="124.0" styleClass="top_button" text="Save as pdf" />
+                      <Button mnemonicParsing="false" onAction="#print" styleClass="top_button" text="🖨️print" />
+                    </buttons>
+                  </ButtonBar>
+               </children>
+            </HBox>
+                <Label styleClass="balance-title" text="Balance Sheet" />
+            </children>
+        </VBox>
+    </top>
+
+    <center>
+        <HBox alignment="CENTER" spacing="20" styleClass="balance-container">
+
+            <!-- Assets -->
+            <VBox spacing="12" styleClass="balance-card" HBox.hgrow="ALWAYS">
+                <children>
+                    <Label styleClass="section-title" text="Assets" />
+
+                    <TableView fx:id="assetTable" stylesheets="@../../css/table-style.css" VBox.vgrow="ALWAYS">
+                        <columns>
+                            <TableColumn fx:id="assetNameColumn" prefWidth="260" text="Account" />
+                            <TableColumn fx:id="assetAmountColumn" prefWidth="180" text="Amount" />
+                        </columns>
+                    </TableView>
+
+                    <Label fx:id="totalAssetLabel" styleClass="total-label" text="Total Assets: 0" />
+                </children>
+            </VBox>
+
+            <!-- Liabilities -->
+            <VBox spacing="12" styleClass="balance-card" HBox.hgrow="ALWAYS">
+                <children>
+                    <Label styleClass="section-title" text="Liabilities  Equity" />
+
+                    <TableView fx:id="liabilityTable" stylesheets="@../../css/table-style.css" VBox.vgrow="ALWAYS">
+                        <columns>
+                            <TableColumn fx:id="liabilityNameColumn" prefWidth="260" text="Account" />
+                            <TableColumn fx:id="liabilityAmountColumn" prefWidth="180" text="Amount" />
+                        </columns>
+                    </TableView>
+
+                    <VBox spacing="6">
+                        <Label fx:id="totalLiabilityLabel" styleClass="total-label" text="Total Liabilities: 0" />
+
+                        <Label fx:id="totalEquityLabel" styleClass="total-label" text="Total Equity: 0" />
+                    </VBox>
+                </children>
+            </VBox>
+
+        </HBox>
+    </center>
+
+</BorderPane>

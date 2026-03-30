@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="root" prefHeight="500.0" prefWidth="700.0" spacing="10.0" stylesheets="@../css/details/detail_view.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bikram.businessmanager.controller.company.CompanyDetailController">
+
+    <!-- HEADER -->
+    <HBox alignment="CENTER_LEFT" minHeight="50" spacing="10" styleClass="header-bar">
+        <padding>
+            <Insets bottom="5" left="15" right="15" top="10" />
+        </padding>
+
+        <Button onAction="#on_back" prefHeight="35" prefWidth="50" styleClass="back-button" text="←" />
+
+        <Label styleClass="page-title" text="Company Details" />
+    </HBox>
+
+    <!-- SCROLLABLE CONTENT -->
+    <ScrollPane fitToWidth="true" styleClass="detail-scroll" VBox.vgrow="ALWAYS">
+        <content>
+            <VBox spacing="15" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 20;" styleClass="detail-card">
+
+                <GridPane hgap="15" vgap="12">
+
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="35" />
+                        <ColumnConstraints percentWidth="65" />
+                    </columnConstraints>
+
+                    <!-- Company Fields -->
+                    <Label styleClass="field-label" text="Company Name:" GridPane.rowIndex="0" />
+                    <Label fx:id="nameLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <Label styleClass="field-label" text="PAN:" GridPane.rowIndex="1" />
+                    <Label fx:id="panLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label styleClass="field-label" text="VAT:" GridPane.rowIndex="2" />
+                    <Label fx:id="vatLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <Label styleClass="field-label" text="Registration No:" GridPane.rowIndex="3" />
+                    <Label fx:id="registrationLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                    <Label styleClass="field-label" text="Company Type:" GridPane.rowIndex="4" />
+                    <Label fx:id="typeLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <Label styleClass="field-label" text="Owner Name:" GridPane.rowIndex="5" />
+                    <Label fx:id="ownerLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                    <Label styleClass="field-label" text="Industry Type:" GridPane.rowIndex="6" />
+                    <Label fx:id="industryLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                    <Label styleClass="field-label" text="Address:" GridPane.rowIndex="7" />
+                    <Label fx:id="addressLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                    <Label styleClass="field-label" text="Phone:" GridPane.rowIndex="8" />
+                    <Label fx:id="phoneLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+                    <Label styleClass="field-label" text="Email:" GridPane.rowIndex="9" />
+                    <Label fx:id="emailLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+                    <Label styleClass="field-label" text="Fiscal Year Start:" GridPane.rowIndex="10" />
+                    <Label fx:id="fiscalStartLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+
+                    <Label styleClass="field-label" text="Fiscal Year End:" GridPane.rowIndex="11" />
+                    <Label fx:id="fiscalEndLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+
+                    <Label styleClass="field-label" text="Branch Id:" GridPane.rowIndex="12" />
+                    <Label fx:id="branchLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+
+                    <Label styleClass="field-label" text="Created At:" GridPane.rowIndex="13" />
+                    <Label fx:id="createdLabel" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+
+                    <Label styleClass="field-label" text="Company Id:" GridPane.rowIndex="14" />
+                    <Label fx:id="companyId" styleClass="field-value" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+
+                </GridPane>
+            </VBox>
+        </content>
+    </ScrollPane>
+
+    <!-- FIXED BOTTOM BUTTON -->
+    <HBox alignment="CENTER_RIGHT" minHeight="50.0" styleClass="footer-bar">
+        <padding>
+            <Insets bottom="10" right="15" />
+        </padding>
+
+        <Button onAction="#handleClose" prefHeight="35" prefWidth="80" styleClass="close-button" text="Close" />
+    </HBox>
+
+    <padding>
+        <Insets bottom="15" left="15" right="15" top="10" />
+    </padding>
+
+</VBox>

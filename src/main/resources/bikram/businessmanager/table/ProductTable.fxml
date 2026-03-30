@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="20" style="-fx-background-color: #669999;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bikram.businessmanager.controller.product.ProductTableController">
+
+    <padding>
+        <Insets bottom="25" left="30" right="30" top="25" />
+    </padding>
+
+    <!-- Title -->
+    <Label style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Product Management" />
+   <HBox prefHeight="36.0" prefWidth="792.0" spacing="10.0" VBox.vgrow="ALWAYS">
+      <padding>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </padding>
+      <children>
+         <ButtonBar prefHeight="40.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+           <buttons>
+             <Button mnemonicParsing="false" onAction="#onPurchaseClick" text="Purchase" />
+               <Button mnemonicParsing="false" onAction="#onSaleClick" text="Sale" />
+               <Button mnemonicParsing="false" onAction="#onDamageClick" text="Damage" />
+               <Button mnemonicParsing="false" onAction="#onAdjustmentClick" text="Adjustment" />
+               <Button mnemonicParsing="false" onAction="#onCurentStockclick" text="CurrentStock" />
+           </buttons>
+         </ButtonBar>
+      </children>
+   </HBox>
+
+    <!-- Search Section -->
+    <HBox alignment="CENTER_LEFT" spacing="15">
+
+        <TextField fx:id="searchField" promptText="Search product..." style="-fx-background-radius: 12; -fx-padding: 10 15 10 15; -fx-background-color: #c2d6d6; -fx-border-color: #dcdde1; -fx-border-radius: 12; -fx-font-size: 14px;" HBox.hgrow="ALWAYS" />
+
+        <Button fx:id="searchBtn" onAction="#searchByBtn" style="                     -fx-background-color: #4a69bd;                     -fx-text-fill: white;                     -fx-background-radius: 12;                     -fx-padding: 10 20 10 20;                     -fx-font-size: 14px;                 " text="Search" />
+    </HBox>
+
+    <Pagination fx:id="pagination" maxPageIndicatorCount="5" pageCount="1" />
+
+    <!-- Table -->
+    <TableView fx:id="productTableView" editable="true" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-background-color: #a3c2c2;" VBox.vgrow="ALWAYS">
+
+        <columns>
+
+            <TableColumn fx:id="idColumn" prefWidth="70" text="ID" />
+            <TableColumn fx:id="nameColumn" text="Name" />
+            <TableColumn fx:id="barcodeColumn" text="Barcode" />
+            <TableColumn fx:id="categoryColumn" text="Category" />
+            <TableColumn fx:id="unitColumn" text="Unit" />
+            <TableColumn fx:id="costPriceColumn" text="Cost Price" />
+            <TableColumn fx:id="sellingPriceColumn" text="Selling Price" />
+            <TableColumn fx:id="vatApplicableColumn" text="VAT" />
+            <TableColumn fx:id="vatRateColumn" text="VAT Rate" />
+            <TableColumn fx:id="createdAtColumn" text="Created At" />
+
+        </columns>
+
+    </TableView>
+
+
+
+</VBox>

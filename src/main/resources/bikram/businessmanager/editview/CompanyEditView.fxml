@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="bikram.businessmanager.controller.company.CompanyEditController"
+            prefHeight="500.0" prefWidth="700.0">
+
+    <children>
+        <VBox spacing="20.0"
+              AnchorPane.topAnchor="20.0"
+              AnchorPane.leftAnchor="20.0"
+              AnchorPane.rightAnchor="20.0"
+              AnchorPane.bottomAnchor="20.0">
+
+            <Label text="Edit Company"
+                   style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+            <GridPane hgap="15" vgap="12">
+
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="30"/>
+                    <ColumnConstraints percentWidth="70"/>
+                </columnConstraints>
+
+                <!-- Company Name -->
+                <Label text="Company Name:" GridPane.rowIndex="0" />
+                <TextField fx:id="companyNameField" promptText="Enter company name"
+                           style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <!-- PAN -->
+                <Label text="PAN Number:" GridPane.rowIndex="1" />
+                <TextField fx:id="panField" promptText="Enter PAN number"
+                           style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <!-- VAT -->
+                <Label text="VAT Number:" GridPane.rowIndex="2" />
+                <TextField fx:id="vatField" promptText="Enter VAT number"
+                           style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <!-- Registration -->
+                <Label text="Registration No:" GridPane.rowIndex="3" />
+                <TextField fx:id="registrationField" promptText="Enter registration number"
+                           style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <!-- Company Type -->
+                <Label text="Company Type:" GridPane.rowIndex="4" />
+                <ComboBox fx:id="companyTypeCombo" promptText="Select company type"
+                          style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <!-- Owner Name -->
+                <Label text="Owner Name:" GridPane.rowIndex="5" />
+                <TextField fx:id="ownerField" promptText="Enter owner name"
+                           style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <!-- Industry Type -->
+                <Label text="Industry Type:" GridPane.rowIndex="6" />
+                <ComboBox fx:id="industryField" promptText="Select industry type"
+                          style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                <!-- Address -->
+                <Label text="Address:" GridPane.rowIndex="7" />
+                <TextField fx:id="addressField" promptText="Enter address"
+                           style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                <!-- Phone -->
+                <Label text="Phone:" GridPane.rowIndex="8" />
+                <TextField fx:id="phoneField" promptText="Enter phone number"
+                           style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+                <!-- Email -->
+                <Label text="Email:" GridPane.rowIndex="9" />
+                <TextField fx:id="emailField" promptText="Enter email"
+                           style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+                <!-- Fiscal Year Start -->
+                <Label text="Fiscal Year Start:" GridPane.rowIndex="10" />
+                <DatePicker fx:id="fiscalYearStartPicker" promptText="Select start date"
+                            style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+
+                <!-- Fiscal Year End -->
+                <Label text="Fiscal Year End:" GridPane.rowIndex="11" />
+                <DatePicker fx:id="fiscalYearEndPicker" promptText="Select end date"
+                            style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+
+                <!-- Active -->
+                <Label text="Active:" GridPane.rowIndex="12" />
+                <CheckBox fx:id="activeCheck" style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+
+                <!-- Branch ID -->
+                <Label text="Branch ID:" GridPane.rowIndex="13" />
+                <TextField fx:id="branchField" promptText="Enter branch ID"
+                           style="-fx-background-color: #c2d6d6;" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+
+            </GridPane>
+
+            <!-- Buttons -->
+            <HBox spacing="15" alignment="CENTER_RIGHT">
+                <Button text="Update"
+                        onAction="#handleUpdate"
+                        style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+                <Button text="Cancel"
+                        onAction="#handleCancel"
+                        style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+            </HBox>
+
+        </VBox>
+    </children>
+</AnchorPane>

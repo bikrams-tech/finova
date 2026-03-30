@@ -1,0 +1,89 @@
+.menu-bar-container {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(111,140,255,0.92), rgba(74,105,189,0.88)),
+        linear-gradient(to right, rgba(255,255,255,0.16), rgba(255,255,255,0.04));
+
+    -fx-border-color: rgba(255,255,255,0.20);
+    -fx-border-width: 1px;
+
+    -fx-padding: 4 8 4 8;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.22), 20, 0.25, 0, 6);
+}
+.menu-bar {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 4 8;
+}
+.menu {
+    -fx-padding: 8 16;
+    -fx-background-radius: 12px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.menu .label {
+    -fx-text-fill: white;
+}
+
+.menu:hover {
+    -fx-background-color: rgba(255,255,255,0.14);
+}
+
+.menu:showing {
+    -fx-background-color: rgba(255,255,255,0.10);
+}
+.back_btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-padding: 8 18;
+    -fx-background-radius: 12px;
+
+    -fx-cursor: hand;
+}
+.back_btn:hover {
+    -fx-background-color: rgba(255,255,255,0.14);
+}
+.back_btn:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+.context-menu {
+
+    -fx-background-color:
+        linear-gradient(to bottom, #ffffff, #f5f7ff);
+
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+
+    -fx-border-color: rgba(0,0,0,0.1);
+
+    -fx-padding: 6;
+
+    -fx-effect:
+        dropshadow(gaussian, rgba(0,0,0,0.18), 18, 0.3, 0, 4);
+}
+
+.menu-item {
+    -fx-padding: 10 18;
+    -fx-font-size: 13px;
+    -fx-background-radius: 10;
+    -fx-background-color: transparent;
+}
+
+.menu-item .label {
+    -fx-text-fill: #2d3436;
+}
+
+.menu-item:focused {
+    -fx-background-color:
+        linear-gradient(to right, #6a82fb, #4a69bd);
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: white;
+}
